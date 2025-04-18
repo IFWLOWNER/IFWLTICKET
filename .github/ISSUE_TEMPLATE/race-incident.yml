@@ -1,0 +1,65 @@
+name: Race Incident Report
+description: Submit a stewarding ticket for review
+title: "[Incident] - "
+labels: [incident, steward-review, needs-review]
+assignees: []
+
+body:
+  - type: input
+    id: reporter
+    attributes:
+      label: Your Name
+      placeholder: e.g., Ben Leahy
+    validations:
+      required: true
+
+  - type: input
+    id: race-name
+    attributes:
+      label: Race/Event Name
+      placeholder: e.g., IFWL GT3 Round 2 - Spa
+    validations:
+      required: true
+
+  - type: dropdown
+    id: session
+    attributes:
+      label: Session
+      options:
+        - Practice
+        - Qualifying
+        - Race
+    validations:
+      required: true
+
+  - type: input
+    id: lap-number
+    attributes:
+      label: Lap Number (if known)
+      placeholder: e.g., Lap 7
+    validations:
+      required: false
+
+  - type: textarea
+    id: incident-details
+    attributes:
+      label: Describe the Incident
+      placeholder: What happened? Which drivers were involved? Include any context the stewards should know.
+    validations:
+      required: true
+
+  - type: input
+    id: replay-timestamp
+    attributes:
+      label: Replay Timestamp (if available)
+      placeholder: e.g., 00:12:36
+    validations:
+      required: false
+
+  - type: input
+    id: onboard-link
+    attributes:
+      label: Onboard or Replay File Link (optional)
+      placeholder: Paste a link to video or replay file
+    validations:
+      required: false
